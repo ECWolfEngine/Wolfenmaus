@@ -116,6 +116,7 @@ CheckButtons:
 
 CheckReset:
 		cmp ax, MOUSE_SET_CURSOR_POSITION
+		jnz Done
 		// The Wolf3D menu code calls this function regularly so seeing this
 		// function means we should disable inversion so that the menu isn't
 		// perpetually waiting for the button to be released.
